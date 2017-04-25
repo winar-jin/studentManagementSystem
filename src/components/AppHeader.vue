@@ -5,6 +5,9 @@
             <span class="profile" @click="checkProfile">
             
                     </span>
+            <span class="message" @click="showMessage">
+                        <icon name="envelope-o"></icon>
+                    </span>
             <span class="logout" @click="logout">
                         <icon name="sign-out"></icon>
                     </span>
@@ -27,6 +30,9 @@ export default {
         },
         checkProfile() {
             console.log("Checkout the profile.");
+        },
+        showMessage(){
+            console.log("show me the unread messsages.");
         }
     },
     computed: {
@@ -94,6 +100,13 @@ header {
             box-shadow: 0 0 5px #eee;
             &:hover{
                 border-color: #ccc;
+                cursor: pointer;
+            }
+        }
+        .message{
+            margin-right: 20px;
+            &:hover {
+                color: #ccc;
                 cursor: pointer;
             }
         }
