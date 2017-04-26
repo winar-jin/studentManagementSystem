@@ -2,15 +2,18 @@
     <header>
         <span class="title">学生评价系统</span>
         <span class="options">
-            <span class="profile" @click="checkProfile">
-            
-                    </span>
-            <span class="message" @click="showMessage">
-                        <icon name="envelope-o"></icon>
-                    </span>
-            <span class="logout" @click="logout">
-                        <icon name="sign-out"></icon>
-                    </span>
+                <span class="profile" @click="checkProfile">
+                
+                        </span>
+        <span class="name" @click="checkProfile">
+                小明
+                        </span>
+        <span class="message" @click="showMessage">
+                            <icon name="envelope-o"></icon>
+                        </span>
+        <span class="logout" @click="logout">
+                            <icon name="power-off"></icon>
+                        </span>
         </span>
     </header>
 </template>
@@ -31,7 +34,7 @@ export default {
         checkProfile() {
             console.log("Checkout the profile.");
         },
-        showMessage(){
+        showMessage() {
             console.log("show me the unread messsages.");
         }
     },
@@ -92,21 +95,31 @@ header {
         align-items: center;
         .profile {
             display: inline-block;
-            margin-right: 20px;
             width: 30px;
             height: 30px;
             border: 1px solid white;
             border-radius: 50%;
             box-shadow: 0 0 5px #eee;
-            &:hover{
+            &:hover {
                 border-color: #ccc;
                 cursor: pointer;
             }
         }
-        .message{
+        .message {
             margin-right: 20px;
             &:hover {
                 color: #ccc;
+                cursor: pointer;
+            }
+        }
+        .name{
+            margin-right: 20px;
+            font-size: 0.8em;
+            &:before{
+                content: '|';
+                padding-left: 10px;
+            }
+            &:hover{
                 cursor: pointer;
             }
         }

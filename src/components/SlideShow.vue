@@ -1,18 +1,43 @@
 <template>
-    
+    <carousel class="slider" :navigationEnabled="true" :perPage="1">
+        <slide>
+            <div class="slider__item">
+                <img src="../assets/img/bjfu1.jpg">
+            </div>
+        </slide>
+        <slide>
+            <div class="slider__item">
+                <img src="../assets/img/bjfu2.jpg">
+            </div>
+        </slide>
+        <slide>
+            <div class="slider__item">
+                <img src="../assets/img/bjfu3.jpg">
+            </div>
+        </slide>
+        <slide>
+            <div class="slider__item">
+                <img src="../assets/img/bjfu4.jpg">
+            </div>
+        </slide>
+    </carousel>
 </template>
 
 
 <script>
-
+import { Carousel, Slide } from 'vue-carousel';
 export default {
     data() {
         return {
-            
+
         }
     },
+    components: {
+        Carousel,
+        Slide
+    },
     methods: {
-       
+
     },
     computed: {
 
@@ -51,5 +76,19 @@ $p: 12px;
 
 *:focus {
     outline: none!important;
+}
+
+.slider {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    .slider__item {
+        img {
+            // width: calc(1.6*800px);
+            // height: calc(0.9*800px);
+            width: 800px;
+            height: 500px;
+        }
+    }
 }
 </style>

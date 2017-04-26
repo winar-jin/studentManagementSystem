@@ -21,6 +21,7 @@
     "vee-validate": "^2.0.0-beta.25",
     "vue": "^2.2.6",
     "vue-awesome": "^2.2.8",
+    "vue-carousel": "^0.6.4",
     "vue-router": "^2.3.1"
   },
   "devDependencies": {

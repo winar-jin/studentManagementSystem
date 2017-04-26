@@ -67,4 +67,12 @@ $p: 12px;
 *:focus {
     outline: none!important;
 }
+#mainpage{
+    background-color: rgba(244, 10, 10, .3);
+    height: 100vh;
+    width: 100vw;
+    main{
+        
+    }
+}
 </style>
