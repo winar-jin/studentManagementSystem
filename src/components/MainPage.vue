@@ -1,5 +1,8 @@
 <template>
     <div id="mainpage">
+        <b-alert state="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
+            Dismissible Alert!
+        </b-alert>
         <AppHeader></AppHeader>
         <main>
             <NavBar></NavBar>
@@ -23,7 +26,7 @@ export default {
     },
     data() {
         return {
-            
+
         }
     },
     methods: {
@@ -67,12 +70,11 @@ $p: 12px;
 *:focus {
     outline: none!important;
 }
-#mainpage{
+
+#mainpage {
     background-color: rgba(244, 10, 10, .3);
     height: 100vh;
     width: 100vw;
-    main{
-        
-    }
+    main {}
 }
 </style>
